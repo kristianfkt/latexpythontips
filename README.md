@@ -1,2 +1,8 @@
-# pythontips
-Repository for when I want to share some notebooks or something with someone
+# Pythontips
+Contains the following notebooks
+
+## Plotting
+Some examples of usefull functions and concepts to keep in mind when making graphics for a thesis or report
+
+## Annet
+Kjøre alle scriptene dine på nytt
