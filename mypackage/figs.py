@@ -49,7 +49,7 @@ def savefig(fig, name, project='./figs/'):
 
     
     fig.savefig(pdf, bbox_inches='tight')
-    fig.savefig(png, dpi=100)
+    fig.savefig(png, dpi=30)
     fig.savefig(pgf)
 
     width,height=fig.get_size_inches()
