@@ -15,32 +15,39 @@
 
 
     \begin{figure}[htbp]
-        \includegraphics[width=0.7\textwidth]{./figs/example_1}
+        \includegraphics[width=\textwidth]{./figs/example_1}
         \caption{Figure example included withour file extension}
         \label{figures:fig:example:1}
     \end{figure}
 
-    You can still specify an extension if you like. This was done in \cref{figures:fig:example:2}. 
-    Notice the difference between \cref{figures:fig:example:2:a,figures:fig:example:2:b} and \cref{figures:fig:example:2:c}.
-    The former have simply been scaled to width, while the latter has been generatex from .tikz code.
+    % You can still specify an extension if you like. This was done in \cref{figures:fig:example:2}. 
+    % Notice the difference between \cref{figures:fig:example:2:png,figures:fig:example:2:pdf} and \cref{figures:fig:example:2:pgf,figures:fig:example:tikz}.
+    % The former have simply been scaled to width, while the latter has been generatex from pgf and tikz code.
 
     \begin{figure}
-        \begin{subfigure}[t]{0.32\textwidth}
+        \begin{subfigure}[t]{0.45\textwidth}
         \includegraphics[width=\linewidth]{./figs/example_1.png}
         \caption{.png}
-        \label{figures:fig:exmaple:2:a}
+        \label{figures:fig:exmaple:2:png}
         \end{subfigure}
         %
-        \begin{subfigure}[t]{0.32\textwidth}
+        \begin{subfigure}[t]{0.45\textwidth}
         \includegraphics[width=\linewidth]{./figs/example_1.pdf}
         \caption{.pdf}
-        \label{figures:fig:exmaple:2:b}
+        \label{figures:fig:exmaple:2:pdf}
         \end{subfigure}
         %
-        \begin{subfigure}[t]{0.32\textwidth}
+        \begin{subfigure}[t]{0.45\textwidth}
+        #\input{./figs/example_1.pgf}
+        \includegraphics{./figs/example_1.pgf}
+        \caption{.pgf}
+        \label{figures:fig:exmaple:2:pgf}
+         \end{subfigure} 
+        %        
+        \begin{subfigure}[t]{0.45\textwidth}
         \includegraphics[width=\linewidth]{./figs/example_1.tikz}
         \caption{.tikz}
-        \label{figures:fig:exmaple:2:c}
+        \label{figures:fig:exmaple:2:tikz}
         \end{subfigure}     
         \caption{Figures included by specifying file extension.}   
         \label{figures:fig:example:2}

@@ -37,22 +37,22 @@ def savefig(fig, name, project='./figs/'):
     for full flexibility of formats and quality
     """
 
-    path = pathlib.Path(project)
+    path = pathlib.Path(project).resolve()
     if path.exists:
         path.mkdir(parents=True, exist_ok=True)
     
-    pdf=path.joinpath(name+'.pdf')
-    png=path.joinpath(name+'.png')
-    pgf=path.joinpath(name+'.pgf')
-
-    tikz=path.joinpath(name+'.tikz')
+    pdf  = path.joinpath(name+'.pdf')
+    png  = path.joinpath(name+'.png')
+    pgf  = path.joinpath(name+'.pgf')
+    tikz = path.joinpath(name+'.tikz')
 
     
     fig.savefig(pdf, bbox_inches='tight')
-    fig.savefig(png, dpi=30)
+    fig.savefig(png, dpi=50)
     fig.savefig(pgf)
 
-    width,height=fig.get_size_inches()
+    width, height=fig.get_size_inches()
+    
     rows = fig.get_axes()[0].get_gridspec().nrows
     cols = fig.get_axes()[0].get_gridspec().ncols
 
@@ -61,6 +61,23 @@ def savefig(fig, name, project='./figs/'):
         axis_height=f'{(height/width)/rows}\linewidth',
         extra_groupstyle_parameters={'vertical sep=4em':None}
     )
+
+    scale = width/figsize()[0]
+    #__fixpgf__(pgf, scale)
+    return
+
+def __fixpgf__(file,scale):
+    """
+    Replacing pgfpicture with tikzpicture enviroment is VERY convenient.
+    Downside is it requires .tikz extension here as well
+    """
+    with open(file, 'r') as f:
+        filedata = f.read()
+    
+    filedata = filedata.replace('\\begin{pgfpicture}', '\\begin{tikzpicture}'+f'[scale={scale}]')
+    filedata = filedata.replace('\\end{pgfpicture}', '\\end{tikzpicture}')
+    with open(file, 'w') as f:
+        f.write(filedata)
     return
 
 if __name__ == '__main__':
