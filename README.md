@@ -1,4 +1,4 @@
-#- <img src="https://latex.codecogs.com/gif.latex?\LaTeX \& Python tips" /> 
+# LaTeX & Python tips 
 Contains the following notebooks
 
 ## Plotting
