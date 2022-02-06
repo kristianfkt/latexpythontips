@@ -10,7 +10,7 @@ def figsize(width=1, height=1):
     """
     Return a tuple defining figure-size based on a standard size
     """
-    standard_size = 8
+    standard_size = 6
     return (width*standard_size, height*standard_size)
 
 def square(scale=1):
@@ -37,20 +37,30 @@ def savefig(fig, name, project='./figs/'):
     for full flexibility of formats and quality
     """
 
-    #Make sure tight_layout is applied
-    fig.tight_layout()
-
     path = pathlib.Path(project)
     if path.exists:
         path.mkdir(parents=True, exist_ok=True)
     
     pdf=path.joinpath(name+'.pdf')
     png=path.joinpath(name+'.png')
-    tikz=path.joinpath(name+'.tex')
+    pgf=path.joinpath(name+'.pgf')
+
+    tikz=path.joinpath(name+'.tikz')
+
     
     fig.savefig(pdf, bbox_inches='tight')
-    fig.savefig(png, dpi=100) #Fast latex compilation
-    tikzplotlib.save(tikz)
+    fig.savefig(png, dpi=100)
+    fig.savefig(pgf)
+
+    width,height=fig.get_size_inches()
+    rows = fig.get_axes()[0].get_gridspec().nrows
+    cols = fig.get_axes()[0].get_gridspec().ncols
+
+    tikzplotlib.save(tikz, 
+        axis_width=f'{1/cols}\linewidth',
+        axis_height=f'{(height/width)/rows}\linewidth',
+        extra_groupstyle_parameters={'vertical sep=4em':None}
+    )
     return
 
 if __name__ == '__main__':

@@ -6,8 +6,9 @@
 \definecolor{lightgray204}{RGB}{204,204,204}
 \definecolor{steelblue31119180}{RGB}{31,119,180}
 
-\begin{groupplot}[group style={group size=1 by 2}]
+\begin{groupplot}[group style={group size=1 by 2, vertical sep=4em}]
 \nextgroupplot[
+height=0.5\linewidth,
 legend cell align={left},
 legend style={
   fill opacity=0.8,
@@ -19,6 +20,7 @@ legend style={
 },
 tick align=outside,
 tick pos=left,
+width=1.0\linewidth,
 x grid style={darkgray176},
 xlabel={Time/s},
 xmin=-0.25, xmax=5.25,
@@ -238,6 +240,7 @@ table {%
 \addlegendentry{Simulated voltage}
 
 \nextgroupplot[
+height=0.5\linewidth,
 legend cell align={left},
 legend style={
   fill opacity=0.8,
@@ -249,6 +252,7 @@ legend style={
 },
 tick align=outside,
 tick pos=left,
+width=1.0\linewidth,
 x grid style={darkgray176},
 xlabel={Time/s},
 xmin=-0.25, xmax=5.25,
