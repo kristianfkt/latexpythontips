@@ -23,7 +23,7 @@
 \usepackage{subcaption}
 \DeclareGraphicsExtensions{.png, .jpg, .pdf, .tikz, .tex}
 %\graphicspath{{./figs/pdf/}{./figs/png/}{./figs/pgf/}{./figs/tikz/}}
-\newcommand{includepgf}[2]{\resizebox{#1\text}}
+\newcommand{\includepgf}[1]{\resizebox{\linewidth}{!}{\input{#1}}}
 
 %=================================
 % Graphics
@@ -34,6 +34,17 @@
 \usepgfplotslibrary{groupplots,dateplot}
 \usetikzlibrary{patterns,shapes.arrows}
 \pgfplotsset{compat=newest}
+
+\usetikzlibrary{external}
+\tikzexternalize[prefix=./tikzfigs/, mode=convert with system call, up to date check=md5]
+
+\usepackage{filemod}
+\newcommand{\includetikz}[2]{%
+  \tikzsetnextfilename{#2}%
+  \filemodCmp{#1#2.tikz}{./tikzfigs/#2.pdf}%
+    {\tikzset{external/remake next}}{}%
+  \includegraphics[width=\linewidth]{#1#2.tikz}%
+}
 
 %===================================
 % Cross referencing
