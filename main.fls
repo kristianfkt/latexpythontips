@@ -907,6 +907,10 @@ INPUT tikzfigs\example_2.dpth
 INPUT tikzfigs\example_2.pdf
 INPUT .\tikzfigs\example_2.pdf
 INPUT .\tikzfigs\example_2.pdf
+INPUT .\tex\pgfplotstable.tex
+INPUT tex\pgfplotstable.tex
+INPUT .\tex\pgfplotstable.tex
+INPUT tex\pgfplotstable.tex
 INPUT C:\Users\kristian\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\ncntrsbk\pncb8t.vf
 INPUT C:\Users\kristian\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncb8r.tfm
 INPUT C:\Users\kristian\AppData\Local\MiKTeX\pdftex\config\pdftex.map
