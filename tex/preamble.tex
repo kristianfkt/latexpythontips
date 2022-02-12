@@ -1,17 +1,36 @@
-\documentclass[]{article}
+\documentclass[a4paper, english]{article}
 
 %=================================
 % Fonts, endocing
 %=================================
+\usepackage[norsk]{babel} % Støtte for norsk
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{fouriernc}
+
+%===================================
+% Layout
+%==================================
+\usepackage{geometry}
+\usepackage{parskip}
+
+%================================
+% Nice looking code
+%================================
+\usepackage{minted}
+
+
+%===============================
+% Fancy headers
+%==============================
+\usepackage{fancyhdr}
+
 
 %=================================
 % Misc
 %=================================
 \usepackage{pgffor}
 \usepackage{currfile}
-\usepackage{listings}
 
 %====================================
 % Tables
@@ -29,7 +48,6 @@
 \usepackage{subcaption}
 \DeclareGraphicsExtensions{.png, .jpg, .pdf, .tikz, .tex}
 %\graphicspath{{./figs/pdf/}{./figs/png/}{./figs/pgf/}{./figs/tikz/}}
-\newcommand{\includepgf}[1]{\resizebox{\linewidth}{!}{\input{#1}}}
 
 %=================================
 % Graphics
@@ -44,6 +62,11 @@
 \usetikzlibrary{external}
 \tikzexternalize[prefix=./tikzfigs/, mode=convert with system call, up to date check=md5]
 
+%=========================================
+% Custom commands
+%=======================================
+\newcommand{\includepgf}[1]{\resizebox{\linewidth}{!}{\input{#1}}}
+
 \usepackage{filemod}
 \newcommand{\includetikz}[2]{%
   \tikzsetnextfilename{#2}%
@@ -55,5 +78,6 @@
 %===================================
 % Cross referencing
 %==================================
+\usepackage[hidelinks]{hyperref}
 \usepackage{cleveref}
 
