@@ -1,35 +1,35 @@
 \section{Figures}
     Including the following line in your preamble
 
-    \begin{lstlisting}
+    \begin{minted}{latex}
     \DeclareGraphicsExtensions{.png, .jpg, .pdf}
-    \end{lstlisting}
+    \end{minted}
 
     you tell tex to check for graphics in that order. In other words, 
-    by not supplying an extension to  \lstinline|\includegraphics{./figname}|, tex will automatically choose .png before .pdf or .tikz.
+    by not supplying an extension to  \mintinline{latex}{\includegraphics{./figname}}, tex will automatically choose .png before .pdf or .tikz.
     You can later change the priority order if you want. 
 
     A second or additional, alternative is to order your graphics into different folders.
     ./figs/pdf/, ./figs/pgf/, ./figs/png/,  ./figfs/tikz/, and add to your preamble
     
-    \begin{lstlisting}
+    \begin{minted}{latex}
     \graphicspath{{./figs/pics/}{./figs/pdf/}}
-    \end{lstlisting}
+    \end{minted}
 
     The code above will tell tex to look for figures in ./figs/pics/ and ./figs/pdf/.
     You can then either supply
 
-    \begin{lstlisting}
+    \begin{minted}{latex}
         \includegraphics{some_fig}
-    \end{lstlisting}
+    \end{minted}
 
     which tex will look for in the mentioned folders, in prioritized format. 
 
     or
 
-    \begin{lstlisting}
+    \begin{minted}{latex}
         \includegraphics{absolute/path/to/figure.jpg}
-    \end{lstlisting}
+    \end{minted}
 
             
 
