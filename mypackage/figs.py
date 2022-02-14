@@ -10,7 +10,7 @@ def figsize(width=1, height=1):
     """
     Return a tuple defining figure-size based on a standard size
     """
-    standard_size = 6
+    standard_size = 4
     return (width*standard_size, height*standard_size)
 
 def square(scale=1):
@@ -25,7 +25,7 @@ def rectangle(scale=1):
     """
     return figsize(width=scale, height=0.62*scale)
 
-def savefig(fig, name, project='./figs/'):
+def savefig(fig, name, root='./figs/',  dir=''):
     """
     Save figure to as many formats as you want to project folder. 
     Consider separating figs into:
@@ -37,18 +37,21 @@ def savefig(fig, name, project='./figs/'):
     for full flexibility of formats and quality
     """
 
-    path = pathlib.Path(project).resolve()
-    if path.exists:
-        path.mkdir(parents=True, exist_ok=True)
+    root = pathlib.Path(root).resolve()
     
-    pdf  = path.joinpath(name+'.pdf')
-    png  = path.joinpath(name+'.png')
-    pgf  = path.joinpath(name+'.pgf')
-    tikz = path.joinpath(name+'.tikz')
+    pdf  = root.joinpath('pdf').joinpath(dir).joinpath(name+'.pdf')
+    png  = root.joinpath('png').joinpath(dir).joinpath(name+'.png')
+    pgf  = root.joinpath('pgf').joinpath(dir).joinpath(name+'.pgf')
+    tikz = root.joinpath('tikz').joinpath(dir).joinpath(name+'.tikz')
+
+    for p in [pdf, png, pgf, tikz]:
+        if not p.parent.exists():
+            p.parent.mkdir(parents=True, exist_ok=True)
+
 
     
     fig.savefig(pdf, bbox_inches='tight')
-    fig.savefig(png, dpi=50)
+    fig.savefig(png, dpi=150)
     fig.savefig(pgf)
 
     width, height=fig.get_size_inches()
@@ -61,23 +64,6 @@ def savefig(fig, name, project='./figs/'):
         axis_height=f'{(height/width)/rows}\linewidth',
         extra_groupstyle_parameters={'vertical sep=4em':None}
     )
-
-    scale = width/figsize()[0]
-    #__fixpgf__(pgf, scale)
-    return
-
-def __fixpgf__(file,scale):
-    """
-    Replacing pgfpicture with tikzpicture enviroment is VERY convenient.
-    Downside is it requires .tikz extension here as well
-    """
-    with open(file, 'r') as f:
-        filedata = f.read()
-    
-    filedata = filedata.replace('\\begin{pgfpicture}', '\\begin{tikzpicture}'+f'[scale={scale}]')
-    filedata = filedata.replace('\\end{pgfpicture}', '\\end{tikzpicture}')
-    with open(file, 'w') as f:
-        f.write(filedata)
     return
 
 if __name__ == '__main__':

@@ -1,0 +1,16 @@
+\pgfdeclareradialshading{new}{\pgfqpoint{0bp}{0bp}}{%
+ color(0bp)=(blue);
+ color(6bp)=(blue!90!black);
+ color(20bp)=(black!75!blue);
+ color(30bp)=(black!85!blue)}
+
+\begin{tikzpicture}
+\begin{scope}
+    \clip (-1,0) circle (1cm);
+    \draw [fill=black!70] (0, 0) circle (1cm);
+    \begin{scope}[transform canvas={xshift=-1cm, rotate=45}]
+        \shade [shading=new] (0.00,0.50) ellipse (1.75 and 1.55);
+    \end{scope}
+    \node (nodename) at (-1, 0) [circle, minimum size = 2cm] {tikz};
+\end{scope}
+\end{tikzpicture}

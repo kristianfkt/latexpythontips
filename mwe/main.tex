@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{graphicx}   %
+\usepackage{tikzscale}  %Allows \includegraphics to parse .tikz files and scales according to width
+\usepackage{pgf}
+\usepackage{tikz}
+\usetikzlibrary{external}
+\tikzexternalize
+
+\usepackage{subcaption}
+
+\begin{document}
+
+\begin{figure}
+    \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[width=\linewidth]{./img.tikz}
+        \caption{Tikz figure read by includegraphics and scaled to linewidth by tikzscale}
+    \end{subfigure}
+\hfill
+    \begin{subfigure}[t]{0.3\textwidth}
+        \resizebox{\linewidth}{!}{\input{./img.pgf}}       %This works
+        \caption{PGF figure read by input and scaled to linewidth by resizebox}
+    \end{subfigure}
+\hfill
+    \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[width=\linewidth]{./img.pgf} %But I want this
+        \caption{PGF figure read by includegraphics and scaled to linewidth by tikzscale}
+\end{subfigure}    
+\end{figure}
+
+
+\end{document}

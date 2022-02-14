@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{k}{\PYGZbs{}usepackage}\PYG{n+na}{[hidelinks]}\PYG{n+nb}{\PYGZob{}}hyperref\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}cleveref\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

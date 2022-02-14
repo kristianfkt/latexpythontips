@@ -1,0 +1,25 @@
+\pgfdeclareradialshading{new}{\pgfqpoint{0bp}{0bp}}{%
+ color(0bp)=(blue);
+ color(6bp)=(blue!90!black);
+ color(20bp)=(black!75!blue);
+ color(30bp)=(black!85!blue)}
+
+ \begin{tikzpicture}
+    \begin{pgfscope}
+        \pgfpathcircle{\pgfpoint{3cm}{0cm}}{1cm}
+        \pgfusepath{clip}
+        \begin{pgflowlevelscope}{\pgftransformshift{\pgfpoint{3cm}{0cm}}, \pgftransformrotate{45}}
+          \pgfpathellipse{\pgfpoint{0cm}{0.5cm}}
+                         {\pgfpoint{1.75cm}{0cm}}
+                         {\pgfpoint{0cm}{1.55cm}}
+          \pgfshadepath{new}{0}
+          \pgfusepath{}
+        \end{pgflowlevelscope}
+      \end{pgfscope}
+      {
+      \pgftransformshift{\pgfpoint{3cm}{0cm}}
+      \pgfset{minimum size=2cm}
+      \pgfnode{circle}{center}{pgf}{nodename}{
+        \pgfusepath{}}
+      }
+\end{tikzpicture}

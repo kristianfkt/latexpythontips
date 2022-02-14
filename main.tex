@@ -1,19 +1,29 @@
 \input{./tex/preamble.tex}
 \input{./tex/frontstuff.tex}
-
+\tikzset{external/force remake}
 \begin{document}
-
 %============================
+
+\pagestyle{empty}
+
+
+\begin{titlepage}
 \maketitle
+\input{./tex/abstract.tex}
+\end{titlepage}
 \clearpage
 
 \tableofcontents
 \clearpage
 
-%===========================
+\pagestyle{fancy}
+\fancyhf{}
 
+\input{./tex/references.tex}
+\input{./tex/chemistry.tex}
 \input{./tex/figures.tex}
 \input{./tex/tikz.tex}
 \input{./tex/pgfplotstable.tex}
 
+%\backmatter
 \end{document}

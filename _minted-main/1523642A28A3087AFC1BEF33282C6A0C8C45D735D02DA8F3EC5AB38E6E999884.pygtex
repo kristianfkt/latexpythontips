@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}figure\PYG{n+nb}{\PYGZcb{}}[htbp]
+        \PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[width=0.7\PYGZbs{}textwidth]}\PYG{n+nb}{\PYGZob{}}example\PYG{n+nb}{\PYGZus{}}1\PYG{n+nb}{\PYGZcb{}}
+        \PYG{k}{\PYGZbs{}caption}\PYG{n+nb}{\PYGZob{}}Example figure included without file extension and file path.\PYG{n+nb}{\PYGZcb{}}
+        \PYG{k}{\PYGZbs{}label}\PYG{n+nb}{\PYGZob{}}figures:fig:example:1\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}figure\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}figure\PYG{n+nb}{\PYGZcb{}}
+            \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}subfigure\PYG{n+nb}{\PYGZcb{}}[t]\PYG{n+nb}{\PYGZob{}}0.45\PYG{k}{\PYGZbs{}textwidth}\PYG{n+nb}{\PYGZcb{}}
+            \PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[width=\PYGZbs{}linewidth]}\PYG{n+nb}{\PYGZob{}}./figs/png/example\PYG{n+nb}{\PYGZus{}}1\PYG{n+nb}{\PYGZcb{}}
+            \PYG{k}{\PYGZbs{}caption}\PYG{n+nb}{\PYGZob{}}.png\PYG{n+nb}{\PYGZcb{}}
+            \PYG{k}{\PYGZbs{}label}\PYG{n+nb}{\PYGZob{}}figures:fig:exmaple:2:png\PYG{n+nb}{\PYGZcb{}}
+            \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}subfigure\PYG{n+nb}{\PYGZcb{}}
+            \PYG{k}{\PYGZbs{}hfill}
+            \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}subfigure\PYG{n+nb}{\PYGZcb{}}[t]\PYG{n+nb}{\PYGZob{}}0.45\PYG{k}{\PYGZbs{}textwidth}\PYG{n+nb}{\PYGZcb{}}
+            \PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[width=\PYGZbs{}linewidth]}\PYG{n+nb}{\PYGZob{}}./figs/pdf/example\PYG{n+nb}{\PYGZus{}}1\PYG{n+nb}{\PYGZcb{}}
+            \PYG{k}{\PYGZbs{}caption}\PYG{n+nb}{\PYGZob{}}.pdf\PYG{n+nb}{\PYGZcb{}}
+            \PYG{k}{\PYGZbs{}label}\PYG{n+nb}{\PYGZob{}}figures:fig:exmaple:2:pdf\PYG{n+nb}{\PYGZcb{}}
+            \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}subfigure\PYG{n+nb}{\PYGZcb{}}
+            \PYG{c}{\PYGZpc{}}
+            \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}subfigure\PYG{n+nb}{\PYGZcb{}}[t]\PYG{n+nb}{\PYGZob{}}0.45\PYG{k}{\PYGZbs{}textwidth}\PYG{n+nb}{\PYGZcb{}}
+            \PYG{k}{\PYGZbs{}resizebox*}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}linewidth}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}!\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}input}\PYG{n+nb}{\PYGZob{}}./figs/pgf/example\PYG{n+nb}{\PYGZus{}}1.pgf\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+            \PYG{k}{\PYGZbs{}caption}\PYG{n+nb}{\PYGZob{}}.pgf\PYG{n+nb}{\PYGZcb{}}
+            \PYG{k}{\PYGZbs{}label}\PYG{n+nb}{\PYGZob{}}figures:fig:exmaple:2:pgf\PYG{n+nb}{\PYGZcb{}}
+             \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}subfigure\PYG{n+nb}{\PYGZcb{}}
+            \PYG{k}{\PYGZbs{}hfill}
+            \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}subfigure\PYG{n+nb}{\PYGZcb{}}[t]\PYG{n+nb}{\PYGZob{}}0.45\PYG{k}{\PYGZbs{}textwidth}\PYG{n+nb}{\PYGZcb{}}
+            \PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[width=\PYGZbs{}linewidth]}\PYG{n+nb}{\PYGZob{}}./figs/tikz/example\PYG{n+nb}{\PYGZus{}}1\PYG{n+nb}{\PYGZcb{}}
+            \PYG{k}{\PYGZbs{}caption}\PYG{n+nb}{\PYGZob{}}.tikz\PYG{n+nb}{\PYGZcb{}}
+            \PYG{k}{\PYGZbs{}label}\PYG{n+nb}{\PYGZob{}}figures:fig:exmaple:2:tikz\PYG{n+nb}{\PYGZcb{}}
+            \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}subfigure\PYG{n+nb}{\PYGZcb{}}
+            \PYG{k}{\PYGZbs{}caption}\PYG{n+nb}{\PYGZob{}}Figures included by specifying file extension.\PYG{n+nb}{\PYGZcb{}}
+            \PYG{k}{\PYGZbs{}label}\PYG{n+nb}{\PYGZob{}}figures:fig:example:2\PYG{n+nb}{\PYGZcb{}}
+        \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}figure\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

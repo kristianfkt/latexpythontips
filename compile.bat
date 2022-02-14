@@ -1,1 +1,1 @@
-latexmk -pdflatex -shell-escape main.tex & pause
+pdflatex -shell-escape main.tex & pause
