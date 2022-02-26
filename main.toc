@@ -1,7 +1,7 @@
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {1}Cross referencing}{2}{section.1}%
-\contentsline {section}{\numberline {2}Chemistry and units}{2}{section.2}%
-\contentsline {section}{\numberline {3}Floats in general}{2}{section.3}%
-\contentsline {section}{\numberline {4}Figures folder structure and formats}{2}{section.4}%
-\contentsline {section}{\numberline {5}TikZ externalize}{4}{section.5}%
-\contentsline {section}{\numberline {6}PGFplotstable}{4}{section.6}%
+\contentsline {section}{\numberline {1}Cross referencing}{3}{section.1}%
+\contentsline {section}{\numberline {2}Chemistry and units}{3}{section.2}%
+\contentsline {section}{\numberline {3}Floats in general}{3}{section.3}%
+\contentsline {section}{\numberline {4}Figures folder structure and formats}{3}{section.4}%
+\contentsline {section}{\numberline {5}TikZ externalize}{5}{section.5}%
+\contentsline {section}{\numberline {6}PGFplotstable}{5}{section.6}%
